@@ -1,0 +1,1 @@
+copy AutoHome-Autostart.lnk "C:\Users\Luca-Alexander\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
