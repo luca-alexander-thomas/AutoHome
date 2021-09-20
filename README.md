@@ -10,7 +10,7 @@ AutoHome ist Perfekt geeignet für Dock Setups Zuhause oder auf der Arbeit.
 
 ## Installation
 - Laden sich sich die Installationsdatei im releases Tab herunter und führen sie diese aus.
-- Geben sie 'winget install AutoHome' in der Eingabeaufforderung ein und AutoHome wird über Winget installiert.
+- Geben sie winget install AutoHome´dvdvd´ in der Eingabeaufforderung ein und AutoHome wird über Winget installiert.
 
 #### Update
 - Manuelles Update über die Aufforderung im AutoHome Panel
