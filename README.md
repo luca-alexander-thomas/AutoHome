@@ -16,6 +16,15 @@ Die Konfiguration von AutoHome-Autostart ist Kinderleicht.
 - Im AutoHome-Panel legen sie alle Einstellungen fest und können AutoHome Konfigurieren.
 - Die AutoHome-Autostart App startet lediglich alle Programme und wird mit jedem Systemstart automatisch gestartet.
 
+###AutoHome-Panel
+1. Öffnen sie das AutoHome-Panel
+2. Gehen sie in den Tab "Einstellungen"
+  - Dort legen sie ihr Wechselspeichermedium fest und klicken sie auf "Dateien kopieren"
+  - Aktivieren oder Deaktivieren Sie den Autostart von Programmen mit AutoHome-Autostart
+  - Sie können zusätzlich noch die Willkommens Nachricht bearbeiten
+3. Gehen sie in den tab "Autostart Programme"
+
+
 ## Installation
 - Laden sich sich die Installationsdatei im releases Tab herunter und führen sie diese aus.
 - Geben sie `winget install AutoHome` in der Eingabeaufforderung ein und AutoHome wird über Winget installiert.
