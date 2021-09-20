@@ -3,9 +3,16 @@
 <br>
 
 ## Beschreibung
-AutoHome ist ein Autostart Programm welches Programme Startet wenn ein bestimmtes Laufwerk vorhanden ist.
+AutoHome-Autostart ist ein Autostart Programm mit dem Augenmerk auf einfache Bedienung und Hohe Kompatibilität.
 <br>
-AutoHome ist Perfekt geeignet für Dock Setups Zuhause oder auf der Arbeit.
+Mit AutoHome-Autostart können sie ihren Arbeitsalltag massiv erleichtern indem sie einem einfachen Wechselspeichermedium den Start von mehreren Skripten und Programmen überlassen.
+<br>
+Passend dazu kann ich ihnen meinem AutoHome-Timer empfehlen, der ihnen die Volle Kontrolle über die Arbeitszeit gibt.
+<br>
+[Weitere Informationen >>](https://github.com/luca-alexander-thomas/AutoHome-Timer)
+
+## Konfiguration
+Die Konfiguration von AutoHome-Autostart ist Kinderleicht.
 
 
 ## Installation
