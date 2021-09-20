@@ -13,7 +13,8 @@ Passend dazu kann ich ihnen meinem AutoHome-Timer empfehlen, der ihnen die Volle
 
 ## Konfiguration
 Die Konfiguration von AutoHome-Autostart ist Kinderleicht.
-
+- Im AutoHome-Panel legen sie alle Einstellungen fest und können AutoHome Konfigurieren.
+- Die AutoHome-Autostart App startet lediglich alle Programme und wird mit jedem Systemstart automatisch gestartet.
 
 ## Installation
 - Laden sich sich die Installationsdatei im releases Tab herunter und führen sie diese aus.
