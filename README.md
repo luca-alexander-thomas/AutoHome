@@ -16,7 +16,7 @@ Die Konfiguration von AutoHome-Autostart ist Kinderleicht.
 - Im AutoHome-Panel legen sie alle Einstellungen fest und können AutoHome Konfigurieren.
 - Die AutoHome-Autostart App startet lediglich alle Programme und wird mit jedem Systemstart automatisch gestartet.
 
-###AutoHome-Panel
+### AutoHome-Panel
 1. Öffnen sie das AutoHome-Panel
 2. Gehen sie in den Tab "Einstellungen"
   - Dort legen sie ihr Wechselspeichermedium fest und klicken sie auf "Dateien kopieren"
@@ -26,7 +26,7 @@ Die Konfiguration von AutoHome-Autostart ist Kinderleicht.
   - Hier können 6 Programme für den Automatischen Start nach dem Anmelden Hinterlegt werden.
   - über die drei Punkte "..." können sie die entsprechenden Dateien Auswählen
   - Mit der Checkbox wird das Ausgewählte Programm in die Autostart Konfiguration geschrieben.
-4. Fertig! Testen sie ihre Konfiguration mit dem Ausführen von "AutoHome-Autostart" 
+4. Fertig! Testen sie ihre Konfiguration mit dem Ausführen von "AutoHome-Autostart"
 
 
 ## Installation
