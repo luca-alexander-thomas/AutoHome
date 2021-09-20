@@ -33,12 +33,12 @@ Die Konfiguration von AutoHome-Autostart ist Kinderleicht.
 - Laden sich sich die Installationsdatei im releases Tab herunter und führen sie diese aus.
 - Geben sie `winget install AutoHome` in der Eingabeaufforderung ein und AutoHome wird über Winget installiert.
 
-#### Update
+### Update
 - Manuelles Update über die Aufforderung im AutoHome Panel
 - Update über Winget mit `winget upgrade AutoHome`
 
 
-##### System vorraussetzungen
+### System vorraussetzungen
 
 1. Windows System (Gestet nur 8-11)
 2. Ein Wechselspeichermedium mit min. 1MB Speicherplatz
