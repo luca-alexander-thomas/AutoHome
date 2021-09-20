@@ -1,5 +1,5 @@
 # AutoHome
-![version](https://img.shields.io/badge/Version-1.0.0-green)
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/luca-alexander-thomas/AutoHome?include_prereleases)
 <br>
 
 ## Beschreibung
