@@ -14,7 +14,7 @@ AutoHome ist Perfekt geeignet für Dock Setups Zuhause oder auf der Arbeit.
 
 #### Update
 - Manuelles Update über die Aufforderung im AutoHome Panel
-- Update über Winget mit `winget update AutoHome`
+- Update über Winget mit `winget upgrade AutoHome`
 
 
 ##### System vorraussetzungen
