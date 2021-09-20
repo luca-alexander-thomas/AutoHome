@@ -1,5 +1,5 @@
 # AutoHome
-![version](https://img.shields.io/badge/Version-1.0.0-green)
+![version](https://img.shields.io/badge/Version-1.0.0-green)![version](https://img.shields.io/badge/Version-2.0.0-green)
 <br>
 
 ## Beschreibung
