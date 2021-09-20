@@ -23,6 +23,10 @@ Die Konfiguration von AutoHome-Autostart ist Kinderleicht.
   - Aktivieren oder Deaktivieren Sie den Autostart von Programmen mit AutoHome-Autostart
   - Sie können zusätzlich noch die Willkommens Nachricht bearbeiten
 3. Gehen sie in den tab "Autostart Programme"
+  - Hier können 6 Programme für den Automatischen Start nach dem Anmelden Hinterlegt werden.
+  - über die drei Punkte "..." können sie die entsprechenden Dateien Auswählen
+  - Mit der Checkbox wird das Ausgewählte Programm in die Autostart Konfiguration geschrieben.
+4. Fertig! Testen sie ihre Konfiguration mit dem Ausführen von "AutoHome-Autostart" 
 
 
 ## Installation
