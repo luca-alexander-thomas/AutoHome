@@ -1,5 +1,16 @@
-﻿#NoEnv
-#NoTrayIcon
+﻿#NoTrayIcon
+SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+
+Arg1 := A_Args[1]
+
+if (Arg1 = "--Execute")
+{
+	MsgBox, 4112, AutoHome-Autostart Fehler, AutoHome Konfigurations und Informations Dateien können nicht ausgeführt werden!
+	ExitApp
+}
+
+else
 
 
 Title := "Auto Home"
@@ -16,11 +27,9 @@ RegRead, var#5, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart\Options, #5
 RegRead, var#6, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart\Options, #6
 RegRead, DEVICE, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart, DEVICE
 }
+%deviceUSB% := MASSDEVICE
 
 
-zzz := FileExist("%DEVICE%")
-
-MsgBox, %zzz%
 
 If (autoON = 1) {
 	Main()
@@ -44,10 +53,10 @@ Main() {
 	
 
 
-if FileExist("%DEVICE%usb.autohome") {
+if FileExist("%MASSDEVICE%usb.autohome") {
 	gosub, Autostart
 }
-if !FileExist("%DEVICE%usb.autohome") {
+if !FileExist("%MASSDEVICE%usb.autohome") {
 	MsgBox, 4112, AutoHome Error, Das Ziel Volume ist nicht verfügbar!`nBitte verbinde das Ziel Volume mit dem System.
 	IfMsgBox, OK
 		ExitApp

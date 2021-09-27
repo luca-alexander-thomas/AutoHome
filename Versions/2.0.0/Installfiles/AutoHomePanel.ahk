@@ -1,5 +1,7 @@
-﻿#NoEnv
-#NoTrayIcon
+﻿#NoTrayIcon
+SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+
 Arg1 := A_Args[1]
 SplashImage, %A_ScriptDir%\ICON\iconB.png, b fs14 CWFFFFFF,  AutoHomePanel Starten...
 Titel := "AutoHome-Panel"
@@ -24,8 +26,9 @@ Loop, 1 {
 	RegRead, AppVersion, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart, AppVersion
 	RegRead, autoON, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart, AutostartON
 	RegRead, 1autoON, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart, 1AutostartON
-}
+	%deviceUSB% := MASSDEVICE
 
+}
 
 
 req := ComObjCreate("Msxml2.XMLHTTP")
@@ -221,16 +224,17 @@ return
 Seldev:
 FileSelectFolder, hodev , ::{20d04fe0-3aea-1069-a2d8-08002b30309d}, 4, Homelaufwerk Auswählen | AutoHome
 RegWrite, Reg_SZ, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart , DEVICE, %hodev% 
-RegRead, deviceUSB, HKEY_CURRENT_USER\SOFTWARE\AHK\AutoHome, DEVICE
 GuiControl, Text, device, %hodev%
 return
 
 
 
 Copy:
-FileCopy, %A_ScriptDir%\bin\autorun.inf, %deviceUSB%
-FileCopy, %A_ScriptDir%\ICON\icon.ico, %deviceUSB%
-FileCopy, %A_ScriptDir%\bin\usb.ath, %deviceUSB% 
+RegRead, deviceUSB, HKEY_CURRENT_USER\SOFTWARE\AHK\AutoHome, DEVICE
+%deviceUSB% := MASSDEVICE
+FileCopy, %A_ScriptDir%\bin\autorun.inf, %MASSDEVICE%
+FileCopy, %A_ScriptDir%\ICON\icon.ico, %MASSDEVICE%
+FileCopy, %A_ScriptDir%\bin\usb.ath, %MASSDEVICE% 
 RegWrite, REG_SZ, HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run, AutoHome - Autostart, "%A_ScriptDir%\AutoHome.exe"
 MsgBox, 262208, Erfolg, Erfolg ! `nDie Dateien Wurden Kopiert! `nAutoHome ist Einsatzbereit.
 IfMsgBox, OK
