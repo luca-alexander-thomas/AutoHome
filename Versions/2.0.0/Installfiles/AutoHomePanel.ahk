@@ -19,14 +19,13 @@ Loop, 1 {
 	RegRead, var#4, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart\Options, #4
 	RegRead, var#5, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart\Options, #5
 	RegRead, var#6, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart\Options, #6
-	RegRead, deviceUSB, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart, DEVICE
+	RegRead, DEVICE, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart, DEVICE
 	RegRead, willmessage, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart, MESSAGE
 	RegRead, target, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart, target
 	RegRead, InstallPath, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart, InstallPath
 	RegRead, AppVersion, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart, AppVersion
 	RegRead, autoON, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart, AutostartON
 	RegRead, 1autoON, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart, 1AutostartON
-	%deviceUSB% := MASSDEVICE
 
 }
 
@@ -79,7 +78,7 @@ Gui -MaximizeBox
 Gui, Add, Picture, x12 y16 w86 h76 , %A_ScriptDir%\ICON\icon.png
 Gui, Add, Text, c0B4C5F x176 y16 w200 h28 +Center, %Titel%
 Gui, Font, s8
-Gui, Add, Link, x380 y94 w100 h15, <a href="https://github.com/luca-alexander-thomas/AutoHome/releases">%UpdateText%</a>
+
 
 Gui, Font, s8
 Gui, Add, StatusBar,,  © 2021 Luca-Alexander Thomas	AutoHome®	%UpdateText%
@@ -89,7 +88,7 @@ Gui, Tab, 1
 Gui, Font, s8 cBlack
 Gui, Add, Text, x5 y125 w160 h28, Homelaufwerk Auswählen: 
 Gui, Font, s8 cBlack
-Gui, Add, Edit,x15 y140 w200 h28 ReadOnly vdevice, %deviceUSB%
+Gui, Add, Edit,x15 y140 w200 h28 ReadOnly vDEVICE, %DEVICE%
 Gui, Add, Button, x290 y140 w96 h28 gCopy, Dateien Kopieren
 Gui, Font, s15 cBlack
 Gui, Add, Button, x220 y140 w30 h28 gSeldev, ...
@@ -230,11 +229,10 @@ return
 
 
 Copy:
-RegRead, deviceUSB, HKEY_CURRENT_USER\SOFTWARE\AHK\AutoHome, DEVICE
-%deviceUSB% := MASSDEVICE
-FileCopy, %A_ScriptDir%\bin\autorun.inf, %MASSDEVICE%
-FileCopy, %A_ScriptDir%\ICON\icon.ico, %MASSDEVICE%
-FileCopy, %A_ScriptDir%\bin\usb.ath, %MASSDEVICE% 
+RegRead, DEVICE, HKEY_CURRENT_USER\SOFTWARE\AHK\AutoHome, DEVICE
+FileCopy, %A_ScriptDir%\bin\autorun.inf, %DEVICE%
+FileCopy, %A_ScriptDir%\ICON\icon.ico, %DEVICE%
+FileCopy, %A_ScriptDir%\bin\usb.ath, %DEVICE% 
 RegWrite, REG_SZ, HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run, AutoHome - Autostart, "%A_ScriptDir%\AutoHome.exe"
 MsgBox, 262208, Erfolg, Erfolg ! `nDie Dateien Wurden Kopiert! `nAutoHome ist Einsatzbereit.
 IfMsgBox, OK
@@ -259,10 +257,11 @@ return
 
 UpdY:
 UpdateText := "Update Verfügbar!"
+Gui, Add, Link, x380 y94 w100 h15, <a href="https://github.com/luca-alexander-thomas/AutoHome/releases">%UpdateText%</a>
 return
 
 UpdN:
-UpdateText := "Version Aktuell"
+UpdateText := "Version Aktuell	"
 return
 
 UpdMBY:

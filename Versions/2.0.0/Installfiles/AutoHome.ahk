@@ -27,7 +27,7 @@ RegRead, var#5, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart\Options, #5
 RegRead, var#6, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart\Options, #6
 RegRead, DEVICE, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart, DEVICE
 }
-%deviceUSB% := MASSDEVICE
+
 
 
 
@@ -53,10 +53,10 @@ Main() {
 	
 
 
-if FileExist("%MASSDEVICE%usb.autohome") {
+if FileExist("%DEVICE%usb.autohome") {
 	gosub, Autostart
 }
-if !FileExist("%MASSDEVICE%usb.autohome") {
+if !FileExist("%DEVICE%usb.autohome") {
 	MsgBox, 4112, AutoHome Error, Das Ziel Volume ist nicht verfügbar!`nBitte verbinde das Ziel Volume mit dem System.
 	IfMsgBox, OK
 		ExitApp
