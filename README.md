@@ -4,6 +4,7 @@
 #### System vorraussetzungen
 
 Windows
+- 11
 - 10
 - 8.1
 - 8
