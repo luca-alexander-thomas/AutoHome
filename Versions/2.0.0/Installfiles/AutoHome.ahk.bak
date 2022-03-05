@@ -1,42 +1,29 @@
 ﻿#NoTrayIcon
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-
-Arg1 := A_Args[1]
-
-if (Arg1 = "--Execute")
-{
-	MsgBox, 4112, AutoHome-Autostart Fehler, AutoHome Konfigurations und Informations Dateien können nicht ausgeführt werden!
-	ExitApp
-}
-
-else
-
+RegRead, confdir, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart, CurrentConfPath
 
 Title := "Auto Home"
+usb := usb
 
-
-Loop, 1 {
-RegRead, autoON, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart, AutostartON
-FileRead, willmessage, %A_ScriptDir%\bin\message.autohome
-RegRead, var#1, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart\Options, #1
-RegRead, var#2, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart\Options, #2
-RegRead, var#3, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart\Options, #3
-RegRead, var#4, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart\Options, #4
-RegRead, var#5, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart\Options, #5
-RegRead, var#6, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart\Options, #6
-RegRead, DEVICE, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart, DEVICE
-}
-%deviceUSB% := MASSDEVICE
+gosub, Readconf
+FileRead, willmessage, %willmessagedir%
+SplitPath, var#1, Prog#1
+SplitPath, var#2, Prog#2
+SplitPath, var#3, Prog#3
+SplitPath, var#4, Prog#4
+SplitPath, var#5, Prog#5
+SplitPath, var#6, Prog#6
+SetWorkingDir, %DEVICE%
+MsgBox, %DEVICE%
 
 
 
-If (autoON = 1) {
+If (status = 1) {
 	Main()
 }
 
-If (autoON = 0) {
-	MsgBox, 4112, AutoHome Error, Autostart ist deaktiviert!`nAktiviere Autostart im AutoHome Panel oder wähle den Eintrag im Startmenü zum Manuellen Start.	
+If (status = 0) {
+	MsgBox, 4112, AutoHome Error, Autostart ist deaktiviert!`nAktiviere Autostart im AutoHome Panel.	
 	ExitApp
 }
 	
@@ -53,47 +40,43 @@ Main() {
 	
 
 
-if FileExist("%MASSDEVICE%usb.autohome") {
-	gosub, Autostart
-}
-if !FileExist("%MASSDEVICE%usb.autohome") {
+IfExist, %DEVICE%usb.autohome {
+	gosub, Autostart }
+IfNotExist, %DEVICE%usb.autohome {
 	MsgBox, 4112, AutoHome Error, Das Ziel Volume ist nicht verfügbar!`nBitte verbinde das Ziel Volume mit dem System.
 	IfMsgBox, OK
-		ExitApp
-}
+		ExitApp }
 }
 
 
 
 
 Autostart:
-
-
 Progress, x31 y84 w200, In Artbeit..., , AutoHome - Autostart, 
 Sleep, 100
-;Run, %var#1%
+Run, %var#1%
 Sleep, 100
-Progress, 14, Programm 1
+Progress, 14, %Prog#1%
 Sleep, 100
 Run, %var#2%
 Sleep, 100
-Progress, 28, Programm 2
+Progress, 28, %Prog#2%
 Sleep, 100
 Run, %var#3%
 Sleep, 100
-Progress, 42, Programm 3
+Progress, 42, %Prog#3%
 Sleep, 100
 Run, %var#4%
 Sleep, 100
-Progress, 56, Programm 4
+Progress, 56, %Prog#4%
 Sleep, 100
 Run, %var#5%
 Sleep, 100
-Progress, 70, Programm 5
+Progress, 70, %Prog#5%
 Sleep, 100
 Run, %var#6%
 Sleep, 100
-Progress, 84, Programm 6
+Progress, 84, %Prog#6%
 sleep, 10
 Progress, 100, ... Fertig!
 sleep, 300
@@ -103,3 +86,24 @@ MsgBox, 64, AutoHome Willkommen, %willmessage%
 IfMsgBox, Ok 
 	ExitApp
 
+
+Readconf:
+IniRead, var#1, %confdir%, programs, 1
+IniRead, var#2, %confdir%, programs, 2
+IniRead, var#3, %confdir%, programs, 3
+IniRead, var#4, %confdir%, programs, 4
+IniRead, var#5, %confdir%, programs, 5
+IniRead, var#6, %confdir%, programs, 6
+IniRead, start#1, %confdir%, programs-start, 1
+IniRead, start#2, %confdir%, programs-start, 2
+IniRead, start#3, %confdir%, programs-start, 3
+IniRead, start#4, %confdir%, programs-start, 4
+IniRead, start#5, %confdir%, programs-start, 5
+IniRead, start#6, %confdir%, programs-start, 6
+IniRead, DEVICE, %confdir%, device, letter
+IniRead, status, %confdir%, main, status
+IniRead, willmessagedir, %confdir%, main, message
+IniRead, username, %confdir%, user, Username
+IniRead, pcname, %confdir%, user, PCname
+IniRead, system, %confdir%, user, System
+return

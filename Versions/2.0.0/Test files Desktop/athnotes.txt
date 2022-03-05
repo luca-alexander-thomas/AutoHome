@@ -1,0 +1,37 @@
+IniRead, var#1, %confdir%, programs, 1
+IniRead, var#2, %confdir%, programs, 2
+IniRead, var#3, %confdir%, programs, 3
+IniRead, var#4, %confdir%, programs, 4
+IniRead, var#5, %confdir%, programs, 5
+IniRead, var#6, %confdir%, programs, 6
+IniRead, start#1, %confdir%, programs-start, 1
+IniRead, start#2, %confdir%, programs-start, 2
+IniRead, start#3, %confdir%, programs-start, 3
+IniRead, start#4, %confdir%, programs-start, 4
+IniRead, start#5, %confdir%, programs-start, 5
+IniRead, start#6, %confdir%, programs-start, 6
+IniRead, DEVICE, %confdir%, device, letter
+IniRead, status, %confdir%, main, status
+IniRead, willmessage, %confdir%, main, message
+IniRead, username, %confdir%, user, Username
+IniRead, pcname, %confdir%, user, PCname
+IniRead, system, %confdir%, user, System
+
+
+
+
+
+
+	RegRead, var#1, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart\Options, #1
+	RegRead, var#2, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart\Options, #2
+	RegRead, var#3, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart\Options, #3
+	RegRead, var#4, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart\Options, #4
+	RegRead, var#5, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart\Options, #5
+	RegRead, var#6, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart\Options, #6
+	RegRead, DEVICE, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart, DEVICE
+	RegRead, willmessage, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart, MESSAGE
+	RegRead, target, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart, target
+	RegRead, InstallPath, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart, InstallPath
+	RegRead, AppVersion, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart, AppVersion
+	RegRead, autoON, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart, AutostartON
+	RegRead, 1autoON, HKEY_CURRENT_USER\SOFTWARE\ATH\Autostart, 1AutostartON
