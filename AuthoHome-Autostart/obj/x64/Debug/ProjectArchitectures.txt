@@ -1,0 +1,1 @@
+C:\Users\Luca\Documents\GitHub\AutoHome\AuthoHome-Autostart\AuthoHome-Autostart.csproj;x64

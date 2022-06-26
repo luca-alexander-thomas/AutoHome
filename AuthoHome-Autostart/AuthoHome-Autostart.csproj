@@ -192,9 +192,6 @@
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\PreviewNoticePage.xaml.cs">
-      <DependentUpon>PreviewNoticePage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\SchemeActivationSamplePage.xaml.cs">
       <DependentUpon>SchemeActivationSamplePage.xaml</DependentUpon>
     </Compile>
@@ -255,10 +252,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\PreviewNoticePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Views\SchemeActivationSamplePage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -299,6 +292,7 @@
     <None Include=".editorconfig" />
     <None Include="AuthoHome-Autostart_TemporaryKey.pfx" />
     <None Include="Settings.XamlStyler" />
+    <PRIResource Include="Strings\de-DE\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
