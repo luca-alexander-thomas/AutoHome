@@ -1,0 +1,10 @@
+C:\Users\Luca\Documents\GitHub\AutoHome\AuthoHome-Autostart.Core\bin\Debug\netstandard2.0\AuthoHome-Autostart.Core.deps.json
+C:\Users\Luca\Documents\GitHub\AutoHome\AuthoHome-Autostart.Core\bin\Debug\netstandard2.0\AuthoHome-Autostart.Core.dll
+C:\Users\Luca\Documents\GitHub\AutoHome\AuthoHome-Autostart.Core\bin\Debug\netstandard2.0\AuthoHome-Autostart.Core.pdb
+C:\Users\Luca\Documents\GitHub\AutoHome\AuthoHome-Autostart.Core\obj\Debug\netstandard2.0\AuthoHome-Autostart.Core.csproj.AssemblyReference.cache
+C:\Users\Luca\Documents\GitHub\AutoHome\AuthoHome-Autostart.Core\obj\Debug\netstandard2.0\AuthoHome-Autostart.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Luca\Documents\GitHub\AutoHome\AuthoHome-Autostart.Core\obj\Debug\netstandard2.0\AuthoHome-Autostart.Core.AssemblyInfoInputs.cache
+C:\Users\Luca\Documents\GitHub\AutoHome\AuthoHome-Autostart.Core\obj\Debug\netstandard2.0\AuthoHome-Autostart.Core.AssemblyInfo.cs
+C:\Users\Luca\Documents\GitHub\AutoHome\AuthoHome-Autostart.Core\obj\Debug\netstandard2.0\AuthoHome-Autostart.Core.csproj.CoreCompileInputs.cache
+C:\Users\Luca\Documents\GitHub\AutoHome\AuthoHome-Autostart.Core\obj\Debug\netstandard2.0\AuthoHome-Autostart.Core.dll
+C:\Users\Luca\Documents\GitHub\AutoHome\AuthoHome-Autostart.Core\obj\Debug\netstandard2.0\AuthoHome-Autostart.Core.pdb
